@@ -20,8 +20,8 @@ public class MemberService {
     public Long join(Member member){
         // 같은 이름이 있는 중복 회원 x
         validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
+        memberRepository.save(member); //set id 가 포함되어 있으니깐
+        return member.getId(); //get id로 해당 멤버의 id를 저장해줌
     }
 
     private void validateDuplicateMember(Member member) {
