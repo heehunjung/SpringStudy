@@ -30,7 +30,7 @@ public class MemoryMemberRepository implements  MemberRepository{
     }
 
     @Override
-    public List<Member> findALL() {
+    public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
 

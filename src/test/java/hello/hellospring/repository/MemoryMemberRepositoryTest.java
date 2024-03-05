@@ -40,7 +40,7 @@ public class MemoryMemberRepositoryTest {
     }
 
     @Test
-    public void findALL(){
+    public void findAll(){
         Member member1 = new Member();
         member1.setName("spring");
         repository.save(member1);
@@ -49,7 +49,7 @@ public class MemoryMemberRepositoryTest {
         member2.setName("spring2");
         repository.save(member2);
 
-        List<Member> result = repository.findALL();
+        List<Member> result = repository.findAll();
         assertThat(result.size()).isEqualTo(2);
     }
 }
